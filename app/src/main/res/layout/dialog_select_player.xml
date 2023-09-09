@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_dialog">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnBack"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_margin="26dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/btn_back_summer" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logoGmae"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        app:srcCompat="@drawable/logo_game" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/backSelectPlayer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoGmae"
+        app:srcCompat="@drawable/back_select_player_dialog" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:gravity="center"
+        android:text="دوتا از مهره هارو انتخاب کن"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/backSelectPlayer"
+        app:layout_constraintStart_toStartOf="@id/backSelectPlayer"
+        app:layout_constraintTop_toTopOf="@id/backSelectPlayer" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintBottom_toTopOf="@id/btnStart"
+        app:layout_constraintEnd_toEndOf="@id/backSelectPlayer"
+        app:layout_constraintStart_toStartOf="@id/backSelectPlayer"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnBlueDomino"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:alpha="0.5"
+            android:tag="blue"
+            app:srcCompat="@drawable/dialog_blue_domino" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnGreenDomino"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:alpha="0.5"
+            android:tag="green"
+            app:srcCompat="@drawable/dialog_green_domino" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnRedDomino"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:alpha="0.5"
+            android:tag="red"
+            app:srcCompat="@drawable/dialog_red_domino" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnOrangeDomino"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:alpha="0.5"
+            android:tag="orange"
+            app:srcCompat="@drawable/dialog_orange_domino" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/back_btn_dialog"
+        android:gravity="center"
+        android:text="شروع بازی"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/backSelectPlayer"
+        app:layout_constraintEnd_toEndOf="@id/backSelectPlayer"
+        app:layout_constraintStart_toStartOf="@id/backSelectPlayer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
