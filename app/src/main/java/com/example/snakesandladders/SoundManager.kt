@@ -1,8 +1,10 @@
 package com.example.snakesandladders
+
 import android.content.Context
 import android.media.AudioAttributes
 import android.media.MediaPlayer
 import android.media.SoundPool
+
 /**
  * A class that manages sound effects and background music for the application.
  *
@@ -25,8 +27,8 @@ class SoundManager(private val context: Context) {
         .build()
 
     // Load sound effect resources into variables
-    var soundEffectClick = soundPool.load(context, R.raw.click, 1)
-    var soundEffectRollDice = soundPool.load(context, R.raw.roll_dice, 1)
+    private val soundEffectClick = soundPool.load(context, R.raw.click, 1)
+    private val soundEffectRollDice = soundPool.load(context, R.raw.roll_dice, 1)
 
     /**
      * Plays the click sound effect.
@@ -51,8 +53,10 @@ class SoundManager(private val context: Context) {
      * @param resourceId The resource ID of the background music to play.
      */
     fun initBackgroundMusic(resourceId: Int) {
-        mediaPlayer =
-            MediaPlayer.create(context, resourceId) // Create MediaPlayer with the provided resource.
+        mediaPlayer = MediaPlayer.create(
+            context,
+            resourceId
+        ) // Create MediaPlayer with the provided resource.
         mediaPlayer?.isLooping = true // Set the music to loop.
         mediaPlayer?.setVolume(0.2f, 0.2f) // Set the volume (adjust as needed).
         mediaPlayer?.start() // Start playing the background music.
